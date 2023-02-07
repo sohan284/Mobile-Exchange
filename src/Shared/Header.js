@@ -5,7 +5,6 @@ import useAdmin from '../Hooks/useAdmin';
 import auth from './../firebase.init';
 import { ShoppingCartIcon } from '@heroicons/react/24/solid';
 
-
 const Header = () => {
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
