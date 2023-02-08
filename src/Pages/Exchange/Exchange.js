@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import useAdmin from '../../Hooks/useAdmin';
 import Footer from '../../Shared/Footer';
 import Header from '../../Shared/Header';
+import { BsFillCartPlusFill } from 'react-icons/bs';
 
 
 const Exchange = () => {
@@ -154,7 +155,7 @@ const Exchange = () => {
         <div class="flex">
           <span class="title-font font-medium text-2xl text-error">${product.price}</span>
           {!admin.admin &&
-        <button onClick={handleAddtoCart} class="flex ml-auto button rounded text-primary border-0 py-2 px-6">Add to Cart</button>
+        <button onClick={handleAddtoCart} class="flex ml-auto button rounded text-primary font-semibold text-center border-0 py-2 px-6">Add to Cart <BsFillCartPlusFill className='text-xl ml-2'/>  </button>
           }
           {admin.admin &&
         <button onClick={handleCustomise} class="flex ml-auto button rounded text-primary border-0 py-2 px-6">Customise</button>

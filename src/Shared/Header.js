@@ -17,8 +17,7 @@ const Header = () => {
     localStorage.removeItem('accessToken');
   }
   return (
-    <div data-aos="fade-down" className="navbar w-full mb-10">
-      {/* <img className='static w-[100%]  left-0 top-0 rounded-lg fixed opacity-25  shadow-xl' src="https://i.ibb.co/s24VNj8/Phone-Exchange-2-Note-Codes.jpg" alt="Burger" /> */}
+    <div data-aos="fade-down" className="navbar mx-auto ">
       <div className="navbar ">
   <div className="navbar-start">
    
