@@ -51,7 +51,7 @@ const Signup = () => {
     return (
         <div>
            <Header></Header>
-           <div data-aos="zoom-in" className='flex border rounded container mx-auto'>
+           <div data-aos="zoom-in" className='flex border my-10 rounded container mx-auto'>
      
           <div className='text-primary w-full  rounded p-8 mt-5 shadow-lg'>
             <div>
