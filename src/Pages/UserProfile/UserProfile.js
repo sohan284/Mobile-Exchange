@@ -1,15 +1,15 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from './../../firebase.init';
-import SunnahLogo from '../../Shared/SunnahLogo';
 import Footer2 from '../../Shared/Footer2';
+import Header from '../../Shared/Header';
+import auth from './../../firebase.init';
 
 const UserProfile = () => {
     const [user] = useAuthState(auth);
     console.log(user);
     return (
         <div>
-            <SunnahLogo></SunnahLogo>
+            <Header></Header>
             <div data-aos="zoom-in-up" className='text-center  w-72 rounded-xl border mx-auto mt-12 shadow-2xl'>
                 <h1 className='mt-5 text-3xl font-bold text-primary '>Profile</h1>
                 <div className='font-bold text-secondary justify-center flex mt-5 '>

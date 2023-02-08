@@ -5,11 +5,11 @@ import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useAdmin from '../../Hooks/useAdmin';
 import Footer from '../../Shared/Footer';
-import SunnahLogo from '../../Shared/SunnahLogo';
+import Header from '../../Shared/Header';
 import AddReview from '../Reviews/AddReview';
 
 
-const BuyNow = () => {
+const Exchange = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState({});
     const [setQuantity] = useState();
@@ -110,7 +110,7 @@ const BuyNow = () => {
 
     return (
         <div>
-            <SunnahLogo></SunnahLogo>
+            <Header></Header>
             <hr />
             <br />
             <hr />
@@ -188,4 +188,4 @@ const BuyNow = () => {
     );
 };
 
-export default BuyNow;
+export default Exchange;

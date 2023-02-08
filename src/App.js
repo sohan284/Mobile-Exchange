@@ -1,41 +1,29 @@
 
-import './App.css';
 import {
-  Routes,
-  Route,
+  Route, Routes
 } from "react-router-dom";
-import Home from './Pages/Home/Home';
-import Jainamaj from './Pages/Home/Products/Jainamaj';
-import Tupi from './Pages/Home/Products/Tupi';
-import Tasbih from './Pages/Home/Products/Tasbih';
-import Attar from './Pages/Home/Products/Attar';
-import Panjabi from './Pages/Home/Products/Panjabi';
-import Borka from './Pages/Home/Products/Borka';
-import QuranAndHadith from './Pages/Home/Products/QuranAndHadith';
-import Products from './Pages/Home/Products/Products';
-import Login from './Pages/Login/Login';
-import Signup from './Pages/Login/Signup';
-import SearchContainer from './Pages/Home/SearchContainer';
-import BuyNow from './Pages/BuyNow/BuyNow';
-import RequireAuth from './Pages/Login/RequireAuth';
-import Cart from './Pages/Cart/Cart';
-import UserProfile from './Pages/UserProfile/UserProfile';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Donation from './Pages/Home/Donation/Donation';
-import OrphanageDetails from './Pages/Home/Donation/OrphanageDetails';
-import OldAgeHomeDetails from './Pages/Home/Donation/OldAgeHomeDetails';
-import Users from './Pages/Home/Admin/Users';
-import RequireAdmin from './Pages/Login/RequireAdmin';
-import AddProduct from './Pages/Home/Admin/AddProduct';
-import ManageProduct from './Pages/Home/Admin/ManageProduct';
-import UpdateProduct from './Pages/Home/Admin/UpdateProduct';
-import ContactUs from './Pages/Home/ContactUs';
+import './App.css';
+import Exchange from "./Pages/BuyNow/Exchange";
+import Cart from './Pages/Cart/Cart';
 import Checkout from './Pages/Cart/Checkout';
 import MyOrder from './Pages/Cart/MyOrder';
+import AddProduct from './Pages/Home/Admin/AddProduct';
 import AllOrders from './Pages/Home/Admin/AllOrders';
+import ManageProduct from './Pages/Home/Admin/ManageProduct';
+import UpdateProduct from './Pages/Home/Admin/UpdateProduct';
+import Users from './Pages/Home/Admin/Users';
+import ContactUs from './Pages/Home/ContactUs';
+import Home from './Pages/Home/Home';
+import Products from './Pages/Home/Products/Products';
+import SearchContainer from './Pages/Home/SearchContainer';
+import Login from './Pages/Login/Login';
+import RequireAdmin from './Pages/Login/RequireAdmin';
+import RequireAuth from './Pages/Login/RequireAuth';
+import Signup from './Pages/Login/Signup';
+import UserProfile from './Pages/UserProfile/UserProfile';
 import CheckoutOne from './Pages/BuyNow/CheckoutOne';
-import Payment from './Pages/Home/Donation/Payment';
 
 function App() {
   return (
@@ -44,13 +32,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}>
           <Route index element={<Products></Products>}></Route>
-          <Route path='QuranandHadith' element={<QuranAndHadith></QuranAndHadith>}></Route>
-          <Route path='panjabi' element={<Panjabi></Panjabi>}></Route>
-          <Route path='borka' element={<Borka></Borka>}></Route>
-          <Route path='tupi' element={<Tupi></Tupi>}></Route>
-          <Route path='jainamaj' element={<Jainamaj></Jainamaj>}></Route>
-          <Route path='tasbih' element={<Tasbih></Tasbih>}></Route>
-          <Route path='attar' element={<Attar></Attar>}></Route>
           <Route path='search' element={<SearchContainer></SearchContainer>}></Route>
           <Route path='/addProduct' element={
             <RequireAdmin>
@@ -77,22 +58,18 @@ function App() {
           }></Route>
         </Route>
         <Route path='/myOrder' element={
-              <MyOrder></MyOrder>
-          }></Route>
-        <Route path='donation' element={<Donation></Donation>}></Route>
-        <Route path='orphanage' element={<OrphanageDetails></OrphanageDetails>}></Route>
-        <Route path='oldagehome' element={<OldAgeHomeDetails></OldAgeHomeDetails>}></Route>
+          <MyOrder></MyOrder>
+        }></Route>
         <Route path='contactus' element={<ContactUs></ContactUs>}></Route>
         <Route path='checkout' element={<Checkout></Checkout>}></Route>
-        <Route path='payment' element={<Payment></Payment>}></Route>
         <Route path='/manageProduct/:productId' element={
           <RequireAdmin>
             <UpdateProduct></UpdateProduct>
           </RequireAdmin>
         }></Route>
-        <Route path='/buynow/:productId' element={
+        <Route path='/Exchange/:productId' element={
           <RequireAuth>
-            <BuyNow></BuyNow>
+            <Exchange></Exchange>
           </RequireAuth>
         }></Route>
 
@@ -110,8 +87,8 @@ function App() {
         <Route path='userprofile' element={<UserProfile></UserProfile>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
-      
-      
+
+
 
       </Routes>
       <ToastContainer />

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 body {
+  background-color: rgb(13, 8, 43);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

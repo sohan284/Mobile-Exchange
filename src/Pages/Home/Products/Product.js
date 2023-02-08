@@ -6,14 +6,14 @@ const Product = ({search,product }) => {
   const navigate = useNavigate();
   const { name, price, img, discount,_id,rating } = product;
  
-  const handleBuyNow = (id) =>{
-    navigate(`/buynow/${id}`)
+  const handleExchange = (id) =>{
+    navigate(`/Exchange/${id}`)
 
   }
   if(name?.toLowerCase().includes(search)){
     return (
         <div>
-          <Card name={name} img={img} price={price} rating={rating} discount={discount} _id={_id} handleBuyNow={handleBuyNow}></Card>
+          <Card name={name} img={img} price={price} rating={rating} discount={discount} _id={_id} handleExchange={handleExchange}></Card>
         </div>
     );
   }

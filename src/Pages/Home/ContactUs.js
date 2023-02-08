@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import SunnahLogo from "../../Shared/SunnahLogo";
 import Footer2 from "../../Shared/Footer2";
+import Header from "../../Shared/Header";
 
 const ContactUs = () => {
   const form = useRef();
@@ -26,8 +26,7 @@ const ContactUs = () => {
   };
   return (
     <div>
-        <SunnahLogo></SunnahLogo>
-        <hr className="my-5"/>
+        <Header></Header>
         <div 
       id="contact"
       className=" rounded-lg mb-10"
@@ -44,7 +43,7 @@ const ContactUs = () => {
             </p>
           </div>
           <div  data-aos="fade-up"
-     data-aos-duration="300" class="card flex-shrink-0 skills w-full max-w-sm shadow-2xl border bg-slate-100 contact">
+     data-aos-duration="300" class="card flex-shrink-0 skills w-full max-w-sm shadow-2xl border contact">
             <form ref={form} onSubmit={sendEmail} class="card-body">
               <div class="form-control">
                 <label class="label">

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import SunnahLogo from '../../Shared/SunnahLogo';
+import Header from '../../Shared/Header';
 import Footer2 from './../../Shared/Footer2';
 
 const Cart = () => {
@@ -48,15 +48,15 @@ const Cart = () => {
 
     return (
         <div>
-            <SunnahLogo></SunnahLogo>
-            <hr className='my-5 mb-20' />
-            <div className='flex justify-center container  mx-auto'>
-                <div className=' rounded-xl shadow-2xl mx-5'>
-                    <div data-aos="zoom-in" className='flex justify-between shadow-lg rounded-t-lg bg-secondary p-1 font-semibold text-xl'>
-                        <h1 className='pr-20'>Shopping Cart</h1>
+            <Header></Header>
+           
+            <div className='flex justify-center container mt-20 h-screen mx-auto'>
+                <div className=' w-full shadow-2xl mx-5'>
+                    <div data-aos="zoom-in" className='flex justify-between shadow-lg  bg-secondary p-1 text-primary font-semibold text-xl'>
+                        <h1 className='pr-20'>Cart</h1>
                         <h1>{items?.length} Items</h1>
                     </div>
-                    <table data-aos="zoom-in" class="table w-full">
+                    <table data-aos="zoom-in" class=" text-primary w-full">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -111,14 +111,14 @@ const Cart = () => {
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td className='font-bold text-xl'>Total</td>
-                       <td className=''>
-                         <div>
-                         <p className='text-[#f74e30] text-xl font-bold font-serif'><h1>= {totalAmount}</h1></p>
+                        <td className='font-bold mt-5 text-xl'>Total</td>
+                       <td>
+                         <div className='mt-2'>
+                         <p className='text-[#cdfffb] text-xl font-bold font-serif'><h1>= {totalAmount}</h1></p>
                         </div>
                         </td>
                        <td>
-                         <button onClick={handleCheckout} className='btn btn-sm rounded-full button'>Proceed Checkout</button>
+                         <button onClick={handleCheckout} className='btn btn-sm mt-2 button'>Proceed Checkout</button>
                         </td>
                         </tbody>
                         
