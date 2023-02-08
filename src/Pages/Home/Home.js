@@ -13,7 +13,7 @@ const Home = () => {
     const [admin] = useAdmin(user);
 
     return (
-        <div className=''>
+        <div>
             <Banner></Banner>
             <Products></Products>
             <Footer></Footer>

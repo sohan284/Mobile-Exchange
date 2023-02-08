@@ -27,7 +27,7 @@ const Products = () => {
     return (
         <div>
             {loading}
-            <div className='grid lg:grid-cols-2 sm:grid-cols-2 mt-3'>
+            <div className='grid lg:grid-cols-3 gap-5 container mx-auto sm:grid-cols-2 mt-3'>
                 {
                     products.map(product => <Product key={product.id} search={search} product={product}></Product>)
                 }

@@ -114,7 +114,7 @@ const Exchange = () => {
   <div class="px-5 py-24 mx-auto">
     <div class="lg:w-4/5 mx-auto flex flex-wrap">
     <img className=' p-12' src={product.img} alt="" /> <div class="lg:w-1/2  lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-        <h2 class="text-sm title-font text-gray-500 tracking-widest">NAME</h2>
+        <h2 class="text-sm title-font text-gray-500 tracking-widest">{product.disc?.brand}</h2>
         <h1 class="text-primary text-3xl title-font font-medium mb-1">{product.name}</h1>
         <div class="flex mb-4">
           <span class="flex text-blue-500 items-center">
@@ -134,23 +134,15 @@ const Exchange = () => {
             </a>
           </span>
         </div>
-        <p class="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
-        <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
-          <div class="flex">
-            <span class="mr-3">Color</span>
-          
-          </div>
-          <div class="flex ml-6 items-center">
-            <span class="mr-3">Size</span>
-            <div class="relative">
-           
-              <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
-            </div>
-          </div>
+        <div class=" mt-6 items-center pb-5 border-b-2 border-gray-200  mb-5">
+        <p class="leading-relaxed pt-1 flex justify-between px-5 font-semibold">Brand  : <span className='px-10'>{product?.disc?.brand}</span></p>
+        <p class="leading-relaxed pt-1 flex justify-between px-5 font-semibold">Model  : <span className='px-10'>{product?.disc?.model}</span></p>
+        <p class="leading-relaxed pt-1 flex justify-between px-5 font-semibold">Variant  : <span className='px-10'>{product?.disc?.variant}</span></p>
+        <p class="leading-relaxed pt-1 flex justify-between px-5 font-semibold">Origin  : <span className='px-10'>{product?.disc?.origin}</span></p>
+        <p class="leading-relaxed pt-1 flex justify-between px-5 font-semibold">RAM  : <span className='px-10'>{product?.disc?.ram}</span></p>
+        <p class="leading-relaxed pt-1 flex justify-between px-5 font-semibold">Storage  : <span className='px-10'>{product?.disc?.storage}</span></p>
+        <p class="leading-relaxed pt-1 flex justify-between px-5 font-semibold">Bettery Health  : <span className='px-10'>{product?.disc?.bh}</span></p>
+        <p class="leading-relaxed pt-1 flex justify-between px-5 font-semibold">Color  : <span className='px-10'>{product?.disc?.color}</span></p>
         </div>
         <div class="flex">
           <span class="title-font font-medium text-2xl text-error">${product.price}</span>

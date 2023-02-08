@@ -27,7 +27,7 @@ import CheckoutOne from './Pages/Exchange/CheckoutOne';
 
 function App() {
   return (
-    <div>
+    <div className="px-auto">
       <hr />
       <Routes>
         <Route path="/" element={<Home></Home>}>
