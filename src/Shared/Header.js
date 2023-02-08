@@ -21,7 +21,6 @@ const Header = () => {
     <div data-aos="fade-down" className="navbar bg-base-100 mb-10">
       <div className="navbar-start">
         <img onClick={navigateToHome} className='w-48' src="https://i.ibb.co/GT1RTkC/amalan-sunnah-removebg-preview.png" alt="" />
-
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
