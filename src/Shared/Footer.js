@@ -10,7 +10,7 @@ const Footer = () => {
     navigate('/');
   }
   return (
-      <footer className="footer items-center p-2 bg-neutral text-neutral-content">
+      <footer className="footer items-center p-2 mx-auto bg-neutral text-neutral-content">
   <div className="items-center grid-flow-col">
   <img onClick={navigateToHome} className='w-10' src="https://i.ibb.co/KNv2VgZ/527-5274855-replace-icon-change-icon-removebg-preview.png" alt="" />
         <p>Copyright © 2023 - All right reserved</p>

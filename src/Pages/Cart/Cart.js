@@ -7,6 +7,7 @@ import Footer from './../../Shared/Footer';
 import { AiFillDelete } from 'react-icons/ai';
 
 
+
 const Cart = () => {
     const [items, setItem] = useState();
     const [user] = useAuthState(auth);
