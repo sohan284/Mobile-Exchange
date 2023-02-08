@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { BsFillCartPlusFill } from 'react-icons/bs';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useAdmin from '../../Hooks/useAdmin';
 import Footer from '../../Shared/Footer';
 import Header from '../../Shared/Header';
-import { BsFillCartPlusFill } from 'react-icons/bs';
 
 
 const Exchange = () => {
@@ -19,7 +19,7 @@ const Exchange = () => {
 
 
     useEffect(() => {
-        const url = `https://as-sunnah-venture.onrender.com/product/${productId}`;
+        const url = `https://mobile-exchange.onrender.com/product/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
@@ -67,7 +67,7 @@ const Exchange = () => {
             const availableQuantity = product.quantity - orderQuantity;
             const updateQuantity = { availableQuantity };
             
-            fetch(`https://as-sunnah-venture.onrender.com/product/${productId}`, {
+            fetch(`https://mobile-exchange.onrender.com/product/${productId}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': "application/json"
@@ -90,7 +90,7 @@ const Exchange = () => {
             "img" : product.img,
             "orderQuantity" : orderQuantity
         }
-        fetch('https://as-sunnah-venture.onrender.com/cart', {
+        fetch('https://mobile-exchange.onrender.com/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

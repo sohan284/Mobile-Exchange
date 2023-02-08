@@ -7,7 +7,7 @@ const Products = () => {
 
    
     useEffect(() => {
-        fetch(`http://localhost:5000/product`)
+        fetch(`https://mobile-exchange.onrender.com/product`)
             .then(res => res.json())
             .then(data =>setProduct(data))
 

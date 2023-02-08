@@ -33,7 +33,7 @@ const AddProduct = () => {
             img: img
 
         }
-        const url = `https://as-sunnah-venture.onrender.com/product`;
+        const url = `https://mobile-exchange.onrender.com/product`;
         fetch(url, {
             method: 'POST',
             headers: {
