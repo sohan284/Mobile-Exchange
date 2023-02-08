@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import SunnahLogo from './../../../Shared/SunnahLogo';
+import Header from '../../../Shared/Header';
 
 const UpdateProduct = ({ id }) => {
     const navigate = useNavigate()
@@ -10,7 +10,7 @@ const UpdateProduct = ({ id }) => {
     console.log(productId);
     const [product, setProduct] = useState();
     useEffect(() => {
-        const url = `https://as-sunnah-venture.onrender.com/product/${productId}`;
+        const url = `https://mobile-exchange.onrender.com/product/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
@@ -30,7 +30,7 @@ const UpdateProduct = ({ id }) => {
             img : img 
 
         }
-        fetch(`https://as-sunnah-venture.onrender.com/product/manage/${productId}`, {
+        fetch(`https://mobile-exchange.onrender.com/product/manage/${productId}`, {
             method: 'PUT',
             headers: {
                 'content-type': "application/json"
@@ -47,7 +47,7 @@ const UpdateProduct = ({ id }) => {
     }
     return (
         <div>
-            <SunnahLogo></SunnahLogo>
+            <Header></Header>
             <hr className='my-5' />
             <div  data-aos="zoom-in" className='bg-slate-100  border-slate-300  w-[80%] mx-auto  rounded-lg shadow-xl border-2 container'>
                 <h2 className='text-center text-xl text-primary my-5 font-bold'>Update Product</h2>

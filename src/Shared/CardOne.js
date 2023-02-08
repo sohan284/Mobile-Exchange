@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CardOne = ({img,name,rating,price,discount,handleBuyNow,_id}) => {
+const CardOne = ({img,name,rating,price,discount,handleExchange,_id}) => {
     return (
         <div>
         <div  className="card card-side productCard ">
@@ -11,7 +11,7 @@ const CardOne = ({img,name,rating,price,discount,handleBuyNow,_id}) => {
             {/* <h3 className='text-xs'><small>{size}</small> </h3> */}
             <h4 className='text-[orange]'>{rating}</h4>
             <div className="card-actions justify-end">
-            <button onClick={()=>handleBuyNow(_id)} className="px-4 text-xs p-2 w-[50%] font-bold rounded-full uppercase exploreButton btn-primary ">Explore More</button>
+            <button onClick={()=>handleExchange(_id)} className="px-4 text-xs p-2 w-[50%] font-bold rounded-full uppercase exploreButton btn-primary ">Explore More</button>
            </div>  
           </div>
         </div>

@@ -5,7 +5,7 @@ import 'react-phone-input-2/lib/style.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
-import SunnahLogo from '../../Shared/SunnahLogo';
+import Header from '../../Shared/Header';
 
 
 const CheckoutOne = ({ amount }) => {
@@ -23,7 +23,7 @@ const CheckoutOne = ({ amount }) => {
 
   
     useEffect(() => {
-        fetch(`https://as-sunnah-venture.onrender.com/product/${productId}`)
+        fetch(`https://mobile-exchange.onrender.com/product/${productId}`)
             .then(res => res.json())
             .then(data => setItem(data))
     })
@@ -40,7 +40,7 @@ const CheckoutOne = ({ amount }) => {
             Payable : item.price,
             order :[item]
         }
-        const url = `https://as-sunnah-venture.onrender.com/order`;
+        const url = `https://mobile-exchange.onrender.com/order`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -56,7 +56,7 @@ const CheckoutOne = ({ amount }) => {
     }
     return (
         <div>
-            <SunnahLogo></SunnahLogo>
+            <Header></Header>
             <hr />
             <div data-aos="zoom-in" className='my-5 mx-auto bg-slate-100  border-slate-200    shadow-xl border container'>
                 <h2 className='text-center text-2xl text-primary my-5 font-bold'>Shipping and Billing</h2>

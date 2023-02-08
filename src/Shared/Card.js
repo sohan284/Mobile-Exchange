@@ -1,22 +1,22 @@
 import React from 'react';
 
-const Card = ({img,name,rating,price,discount,handleBuyNow,_id}) => {
-    return (
-        <div>
-        <div  className="card card-side productCard">
-          <figure> <img className='w-28' src={img} alt="" /></figure>
-          <div className="card-body">
-            <h2 className="card-title  text-base">{name.slice(0,33)}</h2>
-            <h3 className=' font-semibold text-[#ff6117] text-xs'><span className='text-[#a1a1a1] text-sm'>{discount}</span>  BDT {price}</h3>
-            {/* <h3 className='text-xs'><small>{size}</small> </h3> */}
-            <h4 className='text-[orange]'>{rating}</h4>
-            <div className="card-actions justify-end">
-            <button onClick={()=>handleBuyNow(_id)} className="px-4 text-xs p-2 w-[80%] font-bold rounded uppercase exploreButton btn-primary ">Explore More</button>
-           </div>  
+const Card = ({ img, name, rating, price, discount, handleExchange, _id }) => {
+  return (
+    <div>
+      <div className="card m-3 text-primary  border shadow-xl">
+        <figure className="px-10 pt-10">
+          <img  src={img} alt="Shoes" className="rounded-xl h-48" />
+        </figure>
+        <div className="card-body items-center text-center">
+          <h2 className="card-title text-primary">{name}</h2>
+          <p className='text-[tomato] font-semibold'>${price}</p>
+          <div className="card-actions">
+            <button onClick={()=>handleExchange(_id)} className="btn button btn-primary">Explore</button>
           </div>
         </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default Card;
