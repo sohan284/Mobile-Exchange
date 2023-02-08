@@ -20,7 +20,6 @@ const Header = () => {
     <div data-aos="fade-down" className="navbar mx-auto ">
       <div className="navbar ">
   <div className="navbar-start">
-   
     <button onClick={navigateToHome} className="navbar-start btn btn-accent border-none w-56 bg-transparent">
         <span className='text-4xl text-primary font-extrabold font-serif'>E</span> <img  className='w-12' src="https://i.ibb.co/KNv2VgZ/527-5274855-replace-icon-change-icon-removebg-preview.png" alt="" /> <span className='text-2xl text-primary font-extrabold font-serif'>mobile</span>
       </button>
