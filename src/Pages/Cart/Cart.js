@@ -3,7 +3,9 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Header from '../../Shared/Header';
-import Footer2 from './../../Shared/Footer2';
+import Footer from './../../Shared/Footer';
+import { AiFillDelete } from 'react-icons/ai';
+
 
 const Cart = () => {
     const [items, setItem] = useState();
@@ -62,7 +64,7 @@ const Cart = () => {
                                 <th>No</th>
                                 <th></th>
                                 <th>Product Name</th>
-                                <th>Quantity</th>
+                                <th></th>
                                 <th>Price</th>
                                 <th></th>
                             </tr>
@@ -70,12 +72,12 @@ const Cart = () => {
                         {
                             items?.map((item, index) => <tbody>
                                 <tr>
-                                    <th className='bg-slate-50'>
+                                    <th className='bg-secondary'>
                                         <label>
                                             <h1>{index + 1}</h1>
                                         </label>
                                     </th>
-                                    <td className='bg-slate-50'>
+                                    <td className='bg-secondary h-16'>
                                         <div class="flex items-center space-x-3">
                                             <div class="">
                                                 <div class="mask mask-squircle w-10 h-10">
@@ -85,19 +87,19 @@ const Cart = () => {
                                             
                                         </div>
                                     </td>
-                                    <td className='bg-slate-50'>
+                                    <td className='bg-secondary pl-[5px]'>
                                         {item.name}
                                         <br />
                                     </td>
-                                    <td className='bg-slate-50'>
-                                        <p className=' font-semibold'>{item.price} x {item.orderQuantity}</p>
+                                    <td className='bg-secondary'>
+                                        <p className=' font-semibold'></p>
                                     </td>
 
-                                    <td className='bg-slate-50'>
-                                        <p className='text-[tomato] font-semibold'>{item.price * item.orderQuantity}</p>
+                                    <td className='bg-secondary'>
+                                        <p className='text-[#e7c298] font-semibold'>{item.price * item.orderQuantity}</p>
                                     </td>
-                                    <th className='bg-slate-50'>  <div className='flex justify-center'>
-                                        <h4 onClick={() => handleDeleteCart(item._id)} className='btn w-10 btn-ghost h-10  btn-circle btn-sm  border-none  '> <img className='h-5' src="https://i.ibb.co/W2Cwq37/erase-delete-remove-wipe-out-512.webp" alt="" /> </h4>
+                                    <th className='bg-secondary'>  <div className='flex justify-center'>
+                                        <h4 onClick={() => handleDeleteCart(item._id)} className='btn text-error  text-2xl btn-circle btn-sm  border-none  '><AiFillDelete></AiFillDelete></h4>
                                     </div>
                                     </th>
                                 </tr>
@@ -111,7 +113,7 @@ const Cart = () => {
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td className='font-bold mt-5 text-xl'>Total</td>
+                        <td className='font-bold mt-10 text-xl'>Total</td>
                        <td>
                          <div className='mt-2'>
                          <p className='text-[#cdfffb] text-xl font-bold font-serif'><h1>= {totalAmount}</h1></p>
@@ -131,7 +133,7 @@ const Cart = () => {
             </div>
 
             <hr className='my-5 mt-20' />
-            <Footer2></Footer2>
+            <Footer></Footer>
 
         </div>
     );

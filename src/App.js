@@ -5,7 +5,7 @@ import {
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
-import Exchange from "./Pages/BuyNow/Exchange";
+import Exchange from "./Pages/Exchange/Exchange";
 import Cart from './Pages/Cart/Cart';
 import Checkout from './Pages/Cart/Checkout';
 import MyOrder from './Pages/Cart/MyOrder';
@@ -23,7 +23,7 @@ import RequireAdmin from './Pages/Login/RequireAdmin';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Signup from './Pages/Login/Signup';
 import UserProfile from './Pages/UserProfile/UserProfile';
-import CheckoutOne from './Pages/BuyNow/CheckoutOne';
+import CheckoutOne from './Pages/Exchange/CheckoutOne';
 
 function App() {
   return (
@@ -78,7 +78,6 @@ function App() {
             <CheckoutOne></CheckoutOne>
           </RequireAuth>
         }></Route>
-
         <Route path='/cart' element={
           <RequireAuth>
             <Cart></Cart>

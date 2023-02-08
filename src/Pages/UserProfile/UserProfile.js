@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import Footer2 from '../../Shared/Footer2';
+import Footer from '../../Shared/Footer';
 import Header from '../../Shared/Header';
 import auth from './../../firebase.init';
 
@@ -22,7 +22,7 @@ const UserProfile = () => {
                 </div>
             </div>
             <hr className='my-7' />
-            <Footer2></Footer2>
+            <Footer></Footer>
 
         </div>
     );

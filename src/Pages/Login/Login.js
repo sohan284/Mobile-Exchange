@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { BounceLoader } from 'react-spinners';
 import auth from '../../firebase.init';
-import Footer2 from '../../Shared/Footer2';
+import Footer from '../../Shared/Footer';
 import Header from '../../Shared/Header';
+import Loading from '../../Shared/Loading';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -32,16 +32,13 @@ const Login = () => {
   }
   if (loading) {
     return <div className='flex justify-center h-screen items-center'>
-    <BounceLoader
-      color="#6fc205"
-      size={100}
-    />
+    <Loading></Loading>
   </div>
   }
   return (
     <div>
       <Header></Header>
-      <div data-aos="zoom-in" className='flex container mx-auto'>
+      <div data-aos="zoom-in" className='flex border rounded container mx-auto'>
      
           <div className='text-primary w-full  rounded p-8 mt-5 shadow-lg'>
             <div>
@@ -73,7 +70,7 @@ const Login = () => {
         
 
       </div>
-      <Footer2></Footer2>
+      <Footer></Footer>
     </div>
   );
 };

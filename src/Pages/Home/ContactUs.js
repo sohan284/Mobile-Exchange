@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import Footer2 from "../../Shared/Footer2";
+import React, { useRef } from "react";
+import Footer from "../../Shared/Footer";
 import Header from "../../Shared/Header";
 
 const ContactUs = () => {
@@ -71,7 +71,7 @@ const ContactUs = () => {
               </div>
               <div class="form-control">
                 <label class="label">
-                  <span class="label-text  font-semibold">Message</span>
+                  <span class="label-text text-primary font-semibold">Message</span>
                 </label>
                 <textarea
                   className=" text-black  border rounded"
@@ -90,7 +90,7 @@ const ContactUs = () => {
         </div>
       </div>
     </div>
-    <Footer2></Footer2>
+    <Footer></Footer>
     </div>
   );
 };
