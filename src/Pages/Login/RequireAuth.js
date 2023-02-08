@@ -2,7 +2,7 @@ import React, { Children } from 'react';
 import { useAuthState, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from './../../firebase.init';
 import { Navigate, useLocation } from 'react-router-dom';
-import { BounceLoader } from 'react-spinners';
+import Loading from '../../Shared/Loading';
 
 const RequireAuth = ({children}) => {
     const [user,loading] = useAuthState(auth);
@@ -12,10 +12,7 @@ const RequireAuth = ({children}) => {
     if(loading){
         return(
             <div className='flex justify-center h-screen items-center'>
-    <BounceLoader
-      color="#6fc205"
-      size={100}
-    />
+   <Loading></Loading>
   </div>
         );
     }

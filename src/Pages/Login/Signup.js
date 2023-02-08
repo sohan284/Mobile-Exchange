@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import SunnahLogo from './../../Shared/SunnahLogo';
-import { BounceLoader } from 'react-spinners';
-import Footer2 from '../../Shared/Footer2';
 import useToken from '../../Hooks/useToken';
+import Footer from '../../Shared/Footer';
+import Header from '../../Shared/Header';
+import Loading from '../../Shared/Loading';
 
 const Signup = () => {
     const [signInWithGoogle,gUser] = useSignInWithGoogle(auth);
@@ -45,31 +45,29 @@ const Signup = () => {
       }
       if (loading) {
      return <div className='flex justify-center h-screen items-center'>
-        <BounceLoader
-          color="#6fc205"
-          size={100}
-        />
+       <Loading></Loading>
       </div>
       }
     return (
         <div>
-           <SunnahLogo></SunnahLogo>
-            <div data-aos="zoom-in" className='flex justify-center '>
-                <div>
-                    <div className='border rounded p-8 mt-5 shadow-lg'>
+           <Header></Header>
+           <div data-aos="zoom-in" className='flex border rounded container mx-auto'>
+     
+          <div className='text-primary w-full  rounded p-8 mt-5 shadow-lg'>
+            <div>
                         <form>
-                            <h1 className='text-3xl  font-bold mb-5'>Create Account</h1>
+                            <h1 className='text-3xl text-center font-bold mb-5'>Create Account</h1>
 
                             <h6 className='text-sm font-semibold '>Your Name</h6>
-                            <input className='w-72 formInput' 
+                            <input className='w-full formInput' 
                             type="text"
                             value={name} 
                             required
                             onChange={(e)=>setName(e.target.value)}
                             placeholder='Name' />
                            
-                            <h6 className='text-sm font-semibold mt-5'>Email</h6>
-                            <input className='w-72 formInput' 
+                            <h6 className='text-sm  font-semibold mt-5'>Email</h6>
+                            <input className='w-full formInput' 
                             type="text"
                             value={email} 
                             required
@@ -77,7 +75,7 @@ const Signup = () => {
                             placeholder='Email' />
                             
                             <h6 className='text-sm font-semibold mt-5'>Password</h6>
-                            <input  required className='w-72 formInput' 
+                            <input  required className='w-full formInput' 
                             type="password"
                             value={password} 
                             onChange={(e)=>setPassword(e.target.value)}
@@ -85,16 +83,16 @@ const Signup = () => {
 
                             <h6 className='text-sm font-semibold mt-5'>Re-enter Password</h6>
 
-                            <input className='w-72 formInput' type="password"
+                            <input className='w-full formInput' type="password"
                             value={cPassword} 
                             required
                             onChange={(e)=>setCPassword(e.target.value)}
                             placeholder='re-password' />
                             <br />
-                            <button onClick={handleSingUp} className='w-72 button text-white font-bold rounded p-1 mt-5'>Signup</button>
+                            <button onClick={handleSingUp} className='w-full button text-white font-bold rounded p-1 mt-5'>Signup</button>
                             {errorMessage}
                         </form>
-                        <div className=" mt-5" ><small>Already have an account? <span onClick={handleLogin} className='font-semibold text-[blue] lgin' > Log-In</span></small> </div>
+                        <div className=" mt-5" ><small>Already have an account? <span onClick={handleLogin} className='font-semibold text-[yellow] lgin' > Log-In</span></small> </div>
                        
                     </div>
                     
@@ -102,14 +100,15 @@ const Signup = () => {
                     <button onClick={() => signInWithGoogle()} className=' shadow-lg w-full rounded p-1 font-semibold cBtn'>
                         <div className='flex justify-center items-center'>
                             <div><img className='w-10' src="https://i.ibb.co/Qj5082F/images-removebg-preview.png" alt="" /></div>
-                            <div className='font-bold'>Continue With Google</div>
+                            <div className='font-bold text-black'>Continue With Google</div>
                         </div></button>
-                    <hr className='my-7' />
-                   <Footer2></Footer2>
+                  
+                   
 
                 </div>
 
             </div>
+            <Footer></Footer>
         </div>
 
     );

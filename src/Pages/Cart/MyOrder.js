@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import Header from '../../Shared/Header';
 import auth from './../../firebase.init';
-import Footer2 from './../../Shared/Footer2';
-import SunnahLogo from './../../Shared/SunnahLogo';
+import Footer from './../../Shared/Footer';
 
 const MyOrder = () => {
     const [orders,setOrder] = useState()
@@ -15,7 +15,7 @@ const MyOrder = () => {
     })
     return (
         <div>
-            <SunnahLogo></SunnahLogo>
+            <Header></Header>
             <hr className='my-3'/>
             <div>
             <div>
@@ -72,7 +72,7 @@ const MyOrder = () => {
             </div>
         </div>
             </div>
-            <Footer2></Footer2>
+            <Footer></Footer>
         </div>
     );
 };
