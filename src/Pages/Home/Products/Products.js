@@ -4,25 +4,15 @@ import Product from './Product';
 const Products = () => {
     const [products,setProduct] = useState([]);
     const [search, setSearch] = useState('');
-    const [pageCount, setPageCount] = useState(0);
-    const [page,setPage] = useState()
-    const [size ,setSize] =useState(10);
+
+   
     useEffect(() => {
-        fetch(`https://as-sunnah-venture.onrender.com/product?page=${page}&size=${size}`)
+        fetch(`https://mobile-exchange.onrender.com/product`)
             .then(res => res.json())
             .then(data =>setProduct(data))
 
-    }, [page , size])
-    useEffect(() => {
-        fetch(`https://as-sunnah-venture.onrender.com/productCount`)
-            .then(res => res.json())
-            .then(data =>{
-                const count = data.count;
-                const pages = Math.ceil(count/10);
-                setPageCount(pages);
-            })
-
     }, [])
+  
 
     let loading;
     if (products.length === 0) {

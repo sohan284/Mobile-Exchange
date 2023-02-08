@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { AiFillDelete } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Header from '../../Shared/Header';
 import Footer from './../../Shared/Footer';
-import { AiFillDelete } from 'react-icons/ai';
 
 
 
@@ -15,12 +15,12 @@ const Cart = () => {
     let totalAmount = 0;
 
     useEffect(() => {
-        fetch(`https://as-sunnah-venture.onrender.com/cart/${user?.email}`)
+        fetch(`https://mobile-exchange.onrender.com/cart/${user?.email}`)
             .then(res => res.json())
             .then(data => setItem(data))
     })
     const handleDeleteCart = (id) => {
-        fetch(`https://as-sunnah-venture.onrender.com/cart/${id}`, {
+        fetch(`https://mobile-exchange.onrender.com/cart/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
