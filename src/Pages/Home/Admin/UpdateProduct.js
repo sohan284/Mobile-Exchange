@@ -49,7 +49,7 @@ const UpdateProduct = ({ id }) => {
         <div>
             <Header></Header>
             <hr className='my-5' />
-            <div  data-aos="zoom-in" className='bg-slate-100  border-slate-300  w-[80%] mx-auto  rounded-lg shadow-xl border-2 container'>
+            <div    className='bg-slate-100  border-slate-300  w-[80%] mx-auto  rounded-lg shadow-xl border-2 container'>
                 <h2 className='text-center text-xl text-primary my-5 font-bold'>Update Product</h2>
                 <div className='flex flex-col mx-5 my-5'>
                     <div className='flex justify-evenly'>

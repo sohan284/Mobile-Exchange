@@ -38,7 +38,7 @@ const Login = () => {
   return (
     <div>
       <Header></Header>
-      <div data-aos="zoom-in" className='flex my-5 border rounded container mx-auto'>
+      <div   className='flex my-5 border rounded container mx-auto'>
      
           <div className='text-primary w-full  rounded p-8 mt-5 shadow-lg'>
             <div>

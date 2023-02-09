@@ -19,27 +19,27 @@ const MyOrder = () => {
             <hr className='my-3'/>
             <div>
             <div>
-            <div data-aos="zoom-in" class="overflow-x-auto container mt-5 mx-auto w-full">
-                <table class="table w-full">
+            <div   class="overflow-x-auto container border h-screen mt-5 mx-auto w-full">
+                <table class="table  w-full">
                     <thead>
                         <tr>
-                            <th className='bg-slate-100' ></th>
-                            <th className='bg-slate-100'>Product</th>
-                            <th className='bg-slate-100'>Address</th>
-                            <th className='bg-slate-100'>Number</th>
-                            <th className='bg-slate-100'>Amount</th>
-                            <th className='bg-slate-100'></th>
+                            <th className='bg-transparent text-primary border' ></th>
+                            <th className='bg-transparent text-primary border'>Product</th>
+                            <th className='bg-transparent text-primary border'>Address</th>
+                            <th className='bg-transparent text-primary border'>Number</th>
+                            <th className='bg-transparent text-primary border'>Amount</th>
+                            <th className='bg-transparent text-primary border'></th>
                         </tr>
                     </thead>
                     {
                         orders?.map((order,index) => <tbody>
                             <tr>
-                                <th>
+                                <th className='bg-transparent text-primary'>
                                     <label>
                                         <h1>{index + 1}</h1>
                                     </label>
                                 </th>
-                                <td>
+                                <td className='bg-transparent text-primary'>
                                     {
                                         order?.order?.map(o => <div>
                                            <div className='flex items-center my-3'>
@@ -50,19 +50,19 @@ const MyOrder = () => {
                                     }
 
                                 </td>
-                                <td>
+                                <td className='bg-transparent text-primary'>
                                     <div class="flex items-center space-x-3">
                                                {order.Address},{order.district},{order.country}
                                     </div>
                                 </td>
-                                <td>
+                                <td className='bg-transparent text-primary'>
                                     {order.number}
                                     <br />
                                 </td>
-                                <td>
+                                <td className='bg-transparent text-primary'>
                                     <h1 className='text-red-600 font-semibold'>{order.Payable}TK</h1>
                               </td>
-                                <th>
+                                <th className='bg-transparent text-primary'>
                                 </th>
                             </tr>
                             <br />

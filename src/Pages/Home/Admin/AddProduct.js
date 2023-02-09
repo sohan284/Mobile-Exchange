@@ -56,7 +56,7 @@ const AddProduct = () => {
 
     return (
         <div>
-            <div data-aos="zoom-in" className='bg-slate-100  border-slate-200  mx-2   shadow-xl border container'>
+            <div   className='bg-slate-100  border-slate-200  mx-2   shadow-xl border container'>
                 <h2 className='text-center text-xl text-primary my-5 font-bold'>Add Product</h2>
                 <form className='flex flex-col mx-5 my-5'>
                     <h1 className='font-bold pl-1 text-[10px]'>Product code</h1>

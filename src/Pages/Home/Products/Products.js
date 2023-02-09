@@ -16,7 +16,7 @@ const Products = () => {
 
     let loading;
     if (products.length === 0) {
-        loading = <div data-aos="zoom-in" className='flex justify-center mt-10 items-center'>
+        loading = <div   className='flex justify-center mt-10 items-center'>
             <HashLoader
           color="#004680"
           size={100}

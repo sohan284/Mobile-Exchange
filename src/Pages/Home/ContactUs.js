@@ -35,14 +35,14 @@ const ContactUs = () => {
       <div  class="hero">
         <div class="hero-content  flex-col lg:flex-row-reverse">
           <div class="text-center lg:text-left lg:pl-10 w-1/2">
-            <h1 data-aos="fade-up"
+            <h1  
      data-aos-duration="200"  class="text-5xl text-primary font-bold">Get In Touch!</h1>
-            <p  data-aos="fade-up"
+            <p   
      data-aos-duration="300" class="py-6 text-primary">
               Send us email if you think we can help you out with any of your query.
             </p>
           </div>
-          <div  data-aos="fade-up"
+          <div   
      data-aos-duration="300" class="card flex-shrink-0 skills w-full max-w-sm shadow-2xl border contact">
             <form ref={form} onSubmit={sendEmail} class="card-body">
               <div class="form-control">

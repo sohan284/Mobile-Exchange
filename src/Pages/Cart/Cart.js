@@ -55,11 +55,11 @@ const Cart = () => {
            
             <div className='flex justify-center container mt-20 h-screen mx-auto'>
                 <div className=' w-full shadow-2xl mx-5'>
-                    <div data-aos="zoom-in" className='flex justify-between shadow-lg  bg-secondary p-1 text-primary font-semibold text-xl'>
+                    <div   className='flex justify-between shadow-lg  bg-secondary p-1 text-primary font-semibold text-xl'>
                         <h1 className='pr-20'>Cart</h1>
                         <h1>{items?.length} Items</h1>
                     </div>
-                    <table data-aos="zoom-in" class=" text-primary w-full">
+                    <table   class=" text-primary w-full">
                         <thead>
                             <tr>
                                 <th>No</th>

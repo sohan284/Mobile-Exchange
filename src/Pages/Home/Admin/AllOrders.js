@@ -30,7 +30,7 @@ const AllOrders = () => {
             
             <div>
             <div>
-            <div data-aos="zoom-in" class="overflow-x-auto container mt-5 mx-auto w-full">
+            <div   class="overflow-x-auto container mt-5 mx-auto w-full">
                 <table class="table w-full">
                     <thead>
                         <tr>

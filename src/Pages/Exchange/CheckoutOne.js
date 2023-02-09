@@ -58,7 +58,7 @@ const CheckoutOne = ({ amount }) => {
         <div>
             <Header></Header>
             <hr />
-            <div data-aos="zoom-in" className='my-5 mx-auto bg-slate-100  border-slate-200    shadow-xl border container'>
+            <div   className='my-5 mx-auto bg-slate-100  border-slate-200    shadow-xl border container'>
                 <h2 className='text-center text-2xl text-primary my-5 font-bold'>Shipping and Billing</h2>
                 <form onSubmit={handlePlaceOrder} className='flex flex-col mx-5 my-5'>
 

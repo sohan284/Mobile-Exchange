@@ -26,7 +26,7 @@ const ManageProduct = () => {
     }
     return (
         <div>
-            <div data-aos="zoom-in" className='container  mx-auto'>
+            <div   className='container  mx-auto'>
                 <h1 className='text-center font-serif font-bold text-2xl text-primary'>Update & Delete Product</h1>
                 {
                     products.map(product => <div>

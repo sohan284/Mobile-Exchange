@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div className='mx-auto'>
             <Header></Header>
-              <div data-aos="zoom-in">
+              <div  >
               
                 <img className='w-full rounded relative opacity-30' src="https://i.ibb.co/ZmLPh5Q/Phone-Exchange-2-Note-Codes.jpg" alt="Burger" />
                 
